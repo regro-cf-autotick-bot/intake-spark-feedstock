@@ -1,10 +1,10 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 {% set name = "intake-spark" %}
-{% set sha256 = "24ef287b4efdc4a4d4307028ec7cecbaec262feceac34a6d68bec3730c240809" %}
+{% set sha256 = "b34c640b0d3082fda50a2821eb6a564755a7d6b9f904fa66c9e2b3706d9b1da0" %}
 
 package:
-   name: {{ name }}
-   version: {{ version }}
+  name: {{ name }}
+  version: {{ version }}
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }}  -m pip install . --no-deps --ignore-installed -vv"
+  script: {{ PYTHON }}  -m pip install . --no-deps --ignore-installed -vv
 
 requirements:
   host:
